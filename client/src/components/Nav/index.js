@@ -2,21 +2,30 @@ import React from "react";
 
 function Nav() {
     return (
-        <nav className="navbar navbar-expand-lg navbar-primary bg-primary">
-            <a className="navbar-brand" href="/">
-                <h2 className="text-white">Google Book React</h2>
-            </a>
-            <div id="navbarNav">
-                <ul className="navbar-nav">
-                    <li className="nav-item" id="home">
-                        <a className="nav-link" href="/"><button type="button" className="btn btn-info text-black">Search Books</button></a>
-                    </li>
-                    <li className="nav-item" id="report">
-                        <a className="nav-link" href="/saved"><button type="button" className="btn btn-warning text-black">Saved Books</button></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+        <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Google Book React</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Search Books</a></li>
+        <li><a href="/saved">Saved Books</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+        
     );
 }
 
