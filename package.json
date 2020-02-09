@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/skbiswas1975/GoogleBookSearch.git"
+    "url": "git+https://https://github.com/skbiswas1975/google-book-react.git"
   },
   "author": "sanjib",
   "license": "ISC",
@@ -24,7 +24,7 @@
     "concurrently": "^4.1.0",
     "nodemon": "^1.18.7"
   },
-  "homepage": "https://github.com/skbiswas1975/GoogleBookSearch#readme",
+  "homepage": "https://https://github.com/skbiswas1975/google-book-react#readme",
   "dependencies": {
     "axios": "^0.19.2",
     "concurrently": "^5.1.0",
@@ -36,7 +36,6 @@
     "nodemon": "^2.0.2",
     "pages": "0.0.16",
     "react": "^16.12.0",
-    "gh-pages": "^2.2.0",
     "react-router-dom": "^5.1.2"
   }
 }
