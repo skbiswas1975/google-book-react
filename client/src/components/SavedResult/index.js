@@ -5,11 +5,13 @@ import {Row, Col} from "../Grid"
 const SavedResult = props => {
     return (props.savedBooks.length === 0) ? (
         <div className="card">
+        {/*
             <div className="card-body player">
                 <div className="article">
                     <h3>Books that You Saved</h3>
                 </div>
             </div>
+        */}
         </div>
     ):(
         <div className="card">
@@ -18,15 +20,15 @@ const SavedResult = props => {
                     <h3>Books that You Saved</h3>
                     {props.savedBooks.map(savedbook => {
                         return (
-                            <li className="saved-list list-group-item">
-                                <Row className="SearchResult" id={savedbook.title + "Card"} key={savedbook._id}>
+                            <div class="col-lg-12 bottom-pad">
+                                    <div class="row no-gutters">
+                                <Row className="SearchResult row" id={savedbook.title + "Card"} key={savedbook._id}>
                                     {/* col-3 show image of the book */}
-                                    <Col size="2" className="bookImage">
+                                    <div class="col-md-3">
                                         <img src={savedbook.image} alt={savedbook.title} />
-                                    </Col>
-                                    <Col size="1" className="emptyCol"/>
-                                    {/* col-9 show information of the book */}
-                                    <Col size="9" className="bookInfo">
+                                    </div>
+                                    <div class="col-md-9">
+                                        <div class="card-body">
                                         <Row>
                                             <h2 className="bookTitle">{savedbook.title}</h2>
                                         </Row>
@@ -34,12 +36,15 @@ const SavedResult = props => {
                                             <h3 className="bookAuthor">{savedbook.authors}</h3>
                                         </Row>
                                         <Row>
-                                            <p className="bookDescription">{savedbook.description}</p>
+                                            <p className="bookDescription desc">{savedbook.description}</p>
                                         </Row>
-                                    </Col>
-                                </Row>
+                                        </div>
+                                        </div>
+                                {/* </Row>*/}
                                 <br></br>
-                                <Row className="buttonDiv ">
+                                    {/*
+                                    <Row className="buttonDiv "> 
+                                    */}
                                     <button className="deleteBook btn btn-danger" id={savedbook._id} onClick={() => props.handleDeleteButton(savedbook._id)}>
                                         Delete Book
                                     </button>
@@ -49,7 +54,8 @@ const SavedResult = props => {
                                         </button>
                                     </a>
                                 </Row>
-                            </li>
+                            </div>
+                            </div>
                         );
                     })}
                 </div>
