@@ -4,29 +4,34 @@ import {Row, Col} from "../Grid"
 
 const SearchResult = props => {
     return (props.books.length === 0) ? (
+       
         <div className="card">
+         {/*
             <div className="card-body player">
                 <div className="article">
-                    <h3>Search Results</h3>
+                    <h3>Search Results Area</h3>
                 </div>
             </div>
+         */}
         </div>
+        
     ) : (
             <div className="card">
                 <div className="card-body player">
                     <div className="article">
-                        <h3>Search Results</h3>
+                        <h2>Search Results</h2>
                         {props.books.map(book => {
                             return (
-                                <li className="search-list list-group-item">
+                               
+                                    <div class="col-lg-12 bottom-pad">
+                                    <div class="row no-gutters">
                                     <Row className="SearchResult row" id={book.title + "Card"} key={book._id}>
                                         {/* col-3 show image of the book */}
-                                        <Col size="2" className="bookImage">
+                                        <div class="col-md-3">
                                             <img src={book.image} alt={book.title} />
-                                        </Col>
-                                        <Col size="1" className="emptyCol"/>
-                                        {/* col-9 show information of the book */}
-                                        <Col size="9" className="bookInfo">
+                                        </div>
+                                        <div class="col-md-9">
+                                        <div class="card-body">
                                             <Row>
                                                 <h3 className="bookTitle">{book.title}</h3>
                                             </Row>
@@ -34,12 +39,15 @@ const SearchResult = props => {
                                                 <h4 className="bookAuthor">{book.author}</h4>
                                             </Row>
                                             <Row>
-                                                <p className="bookDescription">{book.description}</p>
+                                                <p className="bookDescription desc">{book.description}</p>
                                             </Row>
-                                        </Col>
-                                    </Row>
+                                            </div>
+                                        </div>
+                                   {/* </Row>*/}
                                     <br></br>
-                                    <Row className="buttonDiv ">
+                                    {/*
+                                    <Row className="buttonDiv "> 
+                                    */}
                                         <button className="saveBook btn btn-primary" id={book.id} onClick={(event) => props.handleSavedButton(event)}>
                                             Save Book
                                         </button>
@@ -48,8 +56,12 @@ const SearchResult = props => {
                                                 View Book
                                         </button>
                                         </a>
+                                        
                                     </Row>
-                                </li>
+                                        
+                                    </div>
+                                    </div>
+                               
                             );
                         })}
                     </div>

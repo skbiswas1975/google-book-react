@@ -1,6 +1,11 @@
-form{
+/*form{
     background: rgb(178, 230, 173);
     border-radius: 15px;
+}*/
+form {
+    background: #69727b;
+    border-radius: 15px;
+    color:#f0f8ff
 }
 .BookSearchLabel{
     margin-left:20px;
