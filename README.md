@@ -6,7 +6,7 @@ In this activity, we create a new React-based Google Books Search app. This app 
 ## Links
 * *Github: https://yourusername.github.io/repository-name
 * 
-* *Heroku: https://googlesearchbook.herokuapp.com/*
+* *Heroku: https://googlebookreactsanjib.herokuapp.com/*
 
 ## Technical Requirements
 * Javascript
